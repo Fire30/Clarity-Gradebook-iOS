@@ -19,8 +19,6 @@
 		3202F20917FE14CE00895829 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3202F20817FE14CE00895829 /* XCTest.framework */; };
 		3202F20A17FE14CE00895829 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3202F1E917FE14CE00895829 /* Foundation.framework */; };
 		3202F20B17FE14CE00895829 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3202F1ED17FE14CE00895829 /* UIKit.framework */; };
-		3202F21317FE14CE00895829 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3202F21117FE14CE00895829 /* InfoPlist.strings */; };
-		3202F21517FE14CE00895829 /* claritygradebookTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3202F21417FE14CE00895829 /* claritygradebookTests.m */; };
 		3202F23417FE1F6C00895829 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3202F22217FE1F6C00895829 /* AFHTTPRequestOperation.m */; };
 		3202F23517FE1F6C00895829 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3202F22417FE1F6C00895829 /* AFHTTPRequestOperationManager.m */; };
 		3202F23617FE1F6C00895829 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3202F22617FE1F6C00895829 /* AFHTTPSessionManager.m */; };
@@ -73,9 +71,6 @@
 		3202F20117FE14CE00895829 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3202F20717FE14CE00895829 /* claritygradebookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = claritygradebookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3202F20817FE14CE00895829 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		3202F21017FE14CE00895829 /* claritygradebookTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "claritygradebookTests-Info.plist"; sourceTree = "<group>"; };
-		3202F21217FE14CE00895829 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		3202F21417FE14CE00895829 /* claritygradebookTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = claritygradebookTests.m; sourceTree = "<group>"; };
 		3202F22117FE1F6C00895829 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		3202F22217FE1F6C00895829 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		3202F22317FE1F6C00895829 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -146,7 +141,6 @@
 			children = (
 				329F72FE18032678005610DA /* Default-568h@2x.png */,
 				3202F1EF17FE14CE00895829 /* claritygradebook */,
-				3202F20E17FE14CE00895829 /* claritygradebookTests */,
 				3202F1E817FE14CE00895829 /* Frameworks */,
 				3202F1E717FE14CE00895829 /* Products */,
 			);
@@ -212,24 +206,6 @@
 				3202F1F217FE14CE00895829 /* InfoPlist.strings */,
 				3202F1F517FE14CE00895829 /* main.m */,
 				3202F1F717FE14CE00895829 /* claritygradebook-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		3202F20E17FE14CE00895829 /* claritygradebookTests */ = {
-			isa = PBXGroup;
-			children = (
-				3202F21417FE14CE00895829 /* claritygradebookTests.m */,
-				3202F20F17FE14CE00895829 /* Supporting Files */,
-			);
-			path = claritygradebookTests;
-			sourceTree = "<group>";
-		};
-		3202F20F17FE14CE00895829 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				3202F21017FE14CE00895829 /* claritygradebookTests-Info.plist */,
-				3202F21117FE14CE00895829 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -364,7 +340,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3202F21317FE14CE00895829 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,7 +375,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3202F21517FE14CE00895829 /* claritygradebookTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,14 +403,6 @@
 				3202F1FC17FE14CE00895829 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		3202F21117FE14CE00895829 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3202F21217FE14CE00895829 /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
