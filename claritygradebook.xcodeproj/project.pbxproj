@@ -23,7 +23,6 @@
 		3202F24917FE5AB500895829 /* logo1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3202F24817FE5AB500895829 /* logo1.png */; };
 		329F72ED180263EB005610DA /* AboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 329F72EC180263EB005610DA /* AboutController.m */; };
 		329F72FF18032678005610DA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 329F72FE18032678005610DA /* Default-568h@2x.png */; };
-		329F730118033440005610DA /* README.MD in Resources */ = {isa = PBXBuildFile; fileRef = 329F730018033440005610DA /* README.MD */; };
 		329F730918033462005610DA /* ic_launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 329F730318033462005610DA /* ic_launcher.png */; };
 		329F730A18033462005610DA /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 329F730418033462005610DA /* icon.png */; };
 		329F730B18033462005610DA /* launchlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 329F730518033462005610DA /* launchlogo.png */; };
@@ -40,6 +39,7 @@
 		329F732B180335BE005610DA /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 329F7320180335BE005610DA /* AFURLRequestSerialization.m */; };
 		329F732C180335BE005610DA /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 329F7322180335BE005610DA /* AFURLResponseSerialization.m */; };
 		329F732D180335BE005610DA /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 329F7324180335BE005610DA /* AFURLSessionManager.m */; };
+		329F732F1803363E005610DA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 329F732E1803363E005610DA /* README.md */; };
 		32D4329E1800CCA500757983 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D4329D1800CCA500757983 /* MBProgressHUD.m */; };
 		32D432A81800E98900757983 /* ClassGradeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D432A71800E98900757983 /* ClassGradeViewController.m */; };
 		32D432AC1801DD1100757983 /* IndividualGradeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D432AB1801DD1100757983 /* IndividualGradeViewController.m */; };
@@ -79,7 +79,6 @@
 		329F72EB180263EB005610DA /* AboutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutController.h; sourceTree = "<group>"; };
 		329F72EC180263EB005610DA /* AboutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutController.m; sourceTree = "<group>"; };
 		329F72FE18032678005610DA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		329F730018033440005610DA /* README.MD */ = {isa = PBXFileReference; lastKnownFileType = file; name = README.MD; path = ../README.MD; sourceTree = "<group>"; };
 		329F730318033462005610DA /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
 		329F730418033462005610DA /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		329F730518033462005610DA /* launchlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchlogo.png; sourceTree = "<group>"; };
@@ -106,6 +105,7 @@
 		329F7322180335BE005610DA /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		329F7323180335BE005610DA /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		329F7324180335BE005610DA /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		329F732E1803363E005610DA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = SOURCE_ROOT; };
 		32D4329C1800CCA500757983 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		32D4329D1800CCA500757983 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		32D432A71800E98900757983 /* ClassGradeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassGradeViewController.m; sourceTree = "<group>"; };
@@ -199,8 +199,8 @@
 		3202F1F017FE14CE00895829 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				329F732E1803363E005610DA /* README.md */,
 				329F730218033462005610DA /* img */,
-				329F730018033440005610DA /* README.MD */,
 				3202F24817FE5AB500895829 /* logo1.png */,
 				3202F1F117FE14CE00895829 /* claritygradebook-Info.plist */,
 				3202F1F217FE14CE00895829 /* InfoPlist.strings */,
@@ -339,13 +339,13 @@
 				329F72FF18032678005610DA /* Default-568h@2x.png in Resources */,
 				329F731018033471005610DA /* icon@2x.png in Resources */,
 				3202F1F417FE14CE00895829 /* InfoPlist.strings in Resources */,
+				329F732F1803363E005610DA /* README.md in Resources */,
 				329F730D18033462005610DA /* settings.png in Resources */,
 				3202F1FD17FE14CE00895829 /* Main.storyboard in Resources */,
 				329F730A18033462005610DA /* icon.png in Resources */,
 				3202F24917FE5AB500895829 /* logo1.png in Resources */,
 				329F730918033462005610DA /* ic_launcher.png in Resources */,
 				329F730B18033462005610DA /* launchlogo.png in Resources */,
-				329F730118033440005610DA /* README.MD in Resources */,
 				329F730E18033462005610DA /* spotlight.png in Resources */,
 				329F730C18033462005610DA /* launchlogo2x.png in Resources */,
 			);
