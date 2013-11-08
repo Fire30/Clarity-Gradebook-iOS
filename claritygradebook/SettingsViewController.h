@@ -8,12 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol SettingsViewControllerDelegate <NSObject>
+@protocol SettingsViewControllerDelegate <UIActionSheetDelegate>
 - (void)settingsView:(UIViewController *)view didChangequarterIndex:(int)index;
 @end
 
-@interface SettingsViewController : UITableViewController
+@interface SettingsViewController : UITableViewController <UIActionSheetDelegate>
 
 @property (nonatomic, weak) id <SettingsViewControllerDelegate> delegate;
-
+@property (nonatomic) UIActionSheet *aac;
+@property (nonatomic) NSArray *periodList;
 @end

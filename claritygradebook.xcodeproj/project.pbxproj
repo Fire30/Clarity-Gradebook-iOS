@@ -40,6 +40,8 @@
 		329F732C180335BE005610DA /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 329F7322180335BE005610DA /* AFURLResponseSerialization.m */; };
 		329F732D180335BE005610DA /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 329F7324180335BE005610DA /* AFURLSessionManager.m */; };
 		329F732F1803363E005610DA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 329F732E1803363E005610DA /* README.md */; };
+		32A7CB1F1825CD7E00D23816 /* settings_non_retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 32A7CB1E1825CD7E00D23816 /* settings_non_retina.png */; };
+		32A7CB211825CD9300D23816 /* icon_non_retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 32A7CB201825CD9300D23816 /* icon_non_retina.png */; };
 		32D4329E1800CCA500757983 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D4329D1800CCA500757983 /* MBProgressHUD.m */; };
 		32D432A81800E98900757983 /* ClassGradeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D432A71800E98900757983 /* ClassGradeViewController.m */; };
 		32D432AC1801DD1100757983 /* IndividualGradeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D432AB1801DD1100757983 /* IndividualGradeViewController.m */; };
@@ -106,6 +108,9 @@
 		329F7323180335BE005610DA /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		329F7324180335BE005610DA /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		329F732E1803363E005610DA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = SOURCE_ROOT; };
+		32A7CB191825CD0900D23816 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../icon.png; sourceTree = "<group>"; };
+		32A7CB1E1825CD7E00D23816 /* settings_non_retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings_non_retina.png; sourceTree = "<group>"; };
+		32A7CB201825CD9300D23816 /* icon_non_retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_non_retina.png; sourceTree = "<group>"; };
 		32D4329C1800CCA500757983 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		32D4329D1800CCA500757983 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		32D432A71800E98900757983 /* ClassGradeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassGradeViewController.m; sourceTree = "<group>"; };
@@ -213,6 +218,9 @@
 		329F730218033462005610DA /* img */ = {
 			isa = PBXGroup;
 			children = (
+				32A7CB201825CD9300D23816 /* icon_non_retina.png */,
+				32A7CB1E1825CD7E00D23816 /* settings_non_retina.png */,
+				32A7CB191825CD0900D23816 /* icon.png */,
 				329F730F18033471005610DA /* icon@2x.png */,
 				329F730318033462005610DA /* ic_launcher.png */,
 				329F730418033462005610DA /* icon.png */,
@@ -335,11 +343,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32A7CB211825CD9300D23816 /* icon_non_retina.png in Resources */,
 				3202F20217FE14CE00895829 /* Images.xcassets in Resources */,
 				329F72FF18032678005610DA /* Default-568h@2x.png in Resources */,
 				329F731018033471005610DA /* icon@2x.png in Resources */,
 				3202F1F417FE14CE00895829 /* InfoPlist.strings in Resources */,
 				329F732F1803363E005610DA /* README.md in Resources */,
+				32A7CB1F1825CD7E00D23816 /* settings_non_retina.png in Resources */,
 				329F730D18033462005610DA /* settings.png in Resources */,
 				3202F1FD17FE14CE00895829 /* Main.storyboard in Resources */,
 				329F730A18033462005610DA /* icon.png in Resources */,
@@ -498,6 +508,7 @@
 		3202F21917FE14CE00895829 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "claritygradebook/claritygradebook-Prefix.pch";
@@ -508,8 +519,11 @@
 					"\"${PODS_ROOT}/BuildHeaders\"/**",
 				);
 				INFOPLIST_FILE = "claritygradebook/claritygradebook-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 				d = "";
 			};
@@ -518,6 +532,7 @@
 		3202F21A17FE14CE00895829 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "claritygradebook/claritygradebook-Prefix.pch";
@@ -528,8 +543,11 @@
 					"\"${PODS_ROOT}/BuildHeaders\"/**",
 				);
 				INFOPLIST_FILE = "claritygradebook/claritygradebook-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 				d = "";
 			};

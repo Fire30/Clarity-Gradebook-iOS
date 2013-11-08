@@ -14,6 +14,8 @@
 		<dict>
 			<key>CFBundleIconFiles</key>
 			<array>
+				<string>icon_non_retina</string>
+				<string>settings_non_retina</string>
 				<string>spotlight</string>
 				<string>settings</string>
 				<string>icon</string>
@@ -29,9 +31,9 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.0</string>
+	<string>2.2</string>
 	<key>CFBundleVersion</key>
-	<string>2.0</string>
+	<string>2.2</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UILaunchImages</key>

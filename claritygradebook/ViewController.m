@@ -79,8 +79,10 @@ NSString *staticPassword;
 }
 -(IBAction)clicked:(id)sender {
     if ((UIButton *)sender == loginButton) {
-        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-        dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+        
+            MBProgressHUD *HUD = [[MBProgressHUD alloc] initWithView:self.view];
+            [self.view addSubview:HUD];
+            [HUD show:YES];
             AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
             manager.responseSerializer = [AFHTTPResponseSerializer serializer];
             NSString* loginUrl =  [NSString stringWithFormat:@"%susername=%@&password=%@",LOGINURL,usernameTextField.text,passwordTextField.text];
@@ -106,10 +108,7 @@ NSString *staticPassword;
                     UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Error" message: @"Could Not Log In!" delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
                     [alert show];
             }];
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [MBProgressHUD hideHUDForView:self.view animated:YES];
-            });
-        });
+            [HUD show:NO];
         
     }
 }

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #import "SettingsViewController.h"
+#import "MBProgressHUD.h"
 
 @interface ClassGradeViewController:UITableViewController <SettingsViewControllerDelegate>
 {
@@ -26,6 +27,5 @@
 @property(nonatomic)NSArray *theJson;
 @property(nonatomic)NSString *aspxAuth;
 @property(nonatomic)NSString *studentId;
-
 - (id)initWithJSON:(NSArray *)JSON;
 @end

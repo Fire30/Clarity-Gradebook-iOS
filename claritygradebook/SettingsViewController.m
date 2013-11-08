@@ -11,13 +11,17 @@
 #import "ViewController.h"
 #import "MBProgressHUD.h"
 #import "AFNetworking.h"
+
 #define LOGINURL "http://tcorley.me/clarity/login?"
 
 @interface SettingsViewController ()
 
 @end
 
-@implementation SettingsViewController
+@implementation SettingsViewController 
+
+@synthesize periodList;
+@synthesize aac;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -91,36 +95,49 @@
 {
     if([indexPath row] == 0)
     {
+        self.aac = [[UIActionSheet alloc] initWithTitle:nil
+                                                                 delegate:self
+                                                        cancelButtonTitle:@""
+                                                   destructiveButtonTitle:nil
+                                                        otherButtonTitles:nil];
         
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Sorry :(" message: @"This feature is not supported yet. It will work by second quarter though!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alert show];
+        for (NSString *period in periodList)
+        {
+                [self.aac addButtonWithTitle:period];
+        }
+        
+        [self.aac showInView:self.view];
+        [self.aac setBounds:CGRectMake(0,0,320, 600)];
     }
     else if ([indexPath row] == 1)
     {
             NSString *username = [ViewController getUsernameAndPassword][0];
             NSString *password = [ViewController getUsernameAndPassword][1];
-        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-        dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+        
+            MBProgressHUD *HUD = [[MBProgressHUD alloc] initWithView:self.view];
+            [self.view addSubview:HUD];
+            [HUD show:YES];
             AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
             manager.responseSerializer = [AFHTTPResponseSerializer serializer];
             NSString* loginUrl =  [NSString stringWithFormat:@"%susername=%@&password=%@",LOGINURL,username,password];
             [manager GET:loginUrl parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                [HUD hide:YES];
                 NSArray *JSON = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
                 ClassGradeViewController *vc2 = [[ClassGradeViewController alloc]initWithJSON:JSON];
                 UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:vc2];
                 [self.navigationController presentViewController:navController animated:YES completion:nil];
                 
             } failure:^(AFHTTPRequestOperation *operation, NSError *error){
+                [HUD hide:YES];
                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Error" message: @"Could Not Refresh Grades!" delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
                 [alert show];
             }];
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [MBProgressHUD hideHUDForView:self.view animated:YES];
-            });
-        });
         
     }
-    }
-
+}
+- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    [self.delegate settingsView:self didChangequarterIndex:buttonIndex - 1];
+}
 
 @end
