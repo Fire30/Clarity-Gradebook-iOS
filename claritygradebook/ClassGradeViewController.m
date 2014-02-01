@@ -63,7 +63,12 @@
             [classNames addObject:[class objectForKey:@"class_name"]];
             [enrollIds addObject:[class objectForKey:@"enroll_id"]];
         }
-
+        NSString *msg = [theJson[4] objectForKey:@"message"];
+        if(![msg  isEqual: @""])
+        {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Message" message:msg delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
+        }
     }
     return self;
 }
@@ -165,7 +170,6 @@
     NSString *className = [classNames objectAtIndex:[indexPath section]];
     NSString *termId = [termIds objectAtIndex:[indexPath section]][0];
     NSString *enrollmentId = [enrollIds objectAtIndex:[indexPath section]][0];
-    
     if(![termId  isEqual: @"0"])
     {
     MBProgressHUD *HUD = [[MBProgressHUD alloc] initWithView:self.view];
